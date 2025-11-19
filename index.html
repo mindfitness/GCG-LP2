@@ -11,7 +11,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOD-CLEANER・GOLD 導入LP | サロン集客・売上アップ</title>
+    <title>GOD-CLEANER・GOLD 導入LP | 株式会社マインドフィットネス</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
@@ -45,17 +45,6 @@
         @media (min-width: 768px) { 
             .chart-container { height: 350px; } 
         }
-        .placeholder-bg {
-            background-color: #E0E0E0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #757575;
-            font-size: 0.875rem;
-            text-align: center;
-            border-radius: 0.5rem;
-            min-height: 200px;
-        }
         
         /* 画像のフェードイン演出 */
         .fade-in-up {
@@ -65,29 +54,43 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* プライバシーポリシーモーダル */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
 
-    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16 md:h-20">
-            <div class="text-lg md:text-2xl font-bold text-amber-600 font-serif tracking-wide">
-                GOD-CLEANER・GOLD
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <div class="flex flex-col justify-center">
+                <span class="text-[10px] sm:text-xs text-gray-500 font-bold tracking-wider mb-0.5">株式会社マインドフィットネス</span>
+                <div class="text-lg md:text-2xl font-bold text-amber-600 font-serif tracking-wide leading-none">
+                    GOD-CLEANER・GOLD
+                </div>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <div class="hidden lg:flex space-x-6 text-sm font-medium">
                 <a href="#problem" class="text-gray-600 hover:text-amber-600 transition-colors">サロンの悩み</a>
                 <a href="#solution" class="text-gray-600 hover:text-amber-600 transition-colors">選ばれる理由</a>
                 <a href="#voice" class="text-gray-600 hover:text-amber-600 transition-colors">導入事例</a>
-                <a href="#offer" class="text-gray-600 hover:text-amber-600 transition-colors">導入特典</a>
+                <a href="#price" class="text-gray-600 hover:text-amber-600 transition-colors">価格・プラン</a>
             </div>
-            <a href="https://forms.gle/kCiRHFT1jF2dz7NU9" target="_blank" rel="noopener noreferrer" class="bg-amber-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-amber-700 transition-all shadow-lg hover:shadow-amber-200 transform hover:-translate-y-0.5">
+            <a href="https://forms.gle/kCiRHFT1jF2dz7NU9" target="_blank" rel="noopener noreferrer" class="bg-amber-600 text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-amber-700 transition-all shadow-lg hover:shadow-amber-200 transform hover:-translate-y-0.5">
                 無料資料請求
             </a>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="bg-gradient-hero pt-16 pb-20 lg:pt-28 lg:pb-32 overflow-hidden relative">
+        <section id="hero" class="bg-gradient-hero pt-12 pb-20 lg:pt-24 lg:pb-32 overflow-hidden relative">
             <div class="absolute top-0 right-0 w-2/3 h-full bg-amber-50/50 rounded-bl-[100px] -z-10"></div>
             <div class="absolute top-20 left-10 w-32 h-32 bg-amber-200 rounded-full blur-3xl opacity-20 -z-10"></div>
 
@@ -95,9 +98,6 @@
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     
                     <div class="lg:w-1/2 fade-in-up z-10">
-                        <div class="inline-block px-3 py-1 mb-6 border border-amber-400 text-amber-600 text-xs font-bold tracking-widest rounded-full bg-white">
-                            SALON SOLUTION
-                        </div>
                         <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-6 leading-tight font-serif">
                             集客の悩みを、<br>
                             <span class="text-amber-600 relative inline-block">
@@ -111,19 +111,24 @@
                             <span class="text-amber-600 font-bold">GOD-CLEANER・GOLD</span>
                         </h2>
                         
-                        <p class="text-gray-600 leading-relaxed mb-10 max-w-lg">
+                        <p class="text-gray-600 leading-relaxed mb-8 max-w-lg">
                             既存メニューとの組み合わせで売上を最大化。<br>
                             「結果が見える」から、お客様が驚き、誰かに伝えたくなる。<br>
                             技術不要でサロン経営を変革します。
                         </p>
 
-                        <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-amber-500 inline-flex items-center gap-4 mb-10">
-                            <div>
-                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider">導入実績</p>
-                                <p class="text-2xl font-bold text-gray-800">4,500<span class="text-sm font-normal text-gray-500 ml-1">台突破</span></p>
+                        <div class="bg-gradient-to-r from-amber-50 to-white p-5 rounded-xl shadow-sm border border-amber-100 inline-flex items-center gap-5 mb-10 transform transition hover:scale-105 duration-300">
+                            <div class="bg-amber-100 p-3 rounded-full text-amber-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
                             </div>
-                            <div class="h-8 w-px bg-gray-200"></div>
-                            <div class="text-xs text-gray-500 leading-tight">
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-0.5">信頼の導入実績</p>
+                                <p class="text-3xl font-bold text-gray-800 leading-none">4,500<span class="text-sm font-normal text-gray-500 ml-1">台突破</span></p>
+                            </div>
+                            <div class="h-10 w-px bg-gray-200 mx-2"></div>
+                            <div class="text-xs text-gray-500 leading-tight font-medium">
                                 多くのサロン様に<br>選ばれています
                             </div>
                         </div>
@@ -152,7 +157,6 @@
         <section id="problem" class="py-20 bg-white">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <span class="text-amber-600 font-bold text-sm tracking-wider">PROBLEMS</span>
                     <h2 class="text-3xl md:text-4xl font-bold mt-2 font-serif">
                         こんな<span class="text-amber-600">お悩み</span>ございませんか?
                     </h2>
@@ -220,8 +224,9 @@
                     </p>
                 </div>
 
-                <div class="w-full max-w-4xl mx-auto mb-16 bg-white p-2 rounded-2xl shadow-xl">
-                    <img src="https://imgtu.com/uploads/js5slt7z/r-3_page-0001.webp" alt="デトックス変化の様子" class="w-full rounded-xl"/>
+                <div class="w-full max-w-5xl mx-auto mb-16 bg-white rounded-xl shadow-xl overflow-hidden border-4 border-white">
+                    <img src="https://iili.io/fdcoFWb.png" alt="デトックスによる水の色の変化" class="w-full h-auto object-cover"/>
+                    <p class="text-center text-sm text-gray-500 py-2 bg-gray-50">※効果には個人差があります。画像はイメージです。</p>
                 </div>
                 
                 <h3 class="text-2xl md:text-3xl font-bold text-center mb-12 font-serif">選ばれ続ける「3つの導入メリット」</h3>
@@ -251,16 +256,21 @@
                     実際に導入したサロン様から<br>
                     <span class="text-amber-600">喜びの声</span>が続々
                 </h2>
-                <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">
+                
+                <div class="grid lg:grid-cols-2 gap-12 items-center mb-20">
                     <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100">
-                        <div class="mb-6 flex items-center justify-center">
-                            <img src="https://iili.io/KyCFRl2.md.png" alt="Salon Owner A" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md">
+                        <div class="flex flex-col md:flex-row items-start gap-6 mb-4">
+                            <div class="w-32 h-32 shrink-0">
+                                <img src="https://iili.io/KyCFRl2.md.png" alt="Salon Owner A" class="w-full h-full rounded-xl object-cover shadow-md">
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-3 text-gray-800">「リピート率が50%向上!」</h3>
+                                <p class="text-gray-700 text-sm leading-relaxed">
+                                    "導入後、デトックス後の施術効果アップでお客様の満足度が激変しました。特に「体が軽くなった」という声が多く、施術とのセットメニューが人気に。結果、リピート率が50%も向上しました。"
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-center text-gray-800">「リピート率が50%向上!」</h3>
-                        <p class="text-gray-700 text-base leading-relaxed mb-4">
-                            "導入後、デトックス後の施術効果アップでお客様の満足度が激変しました。特に「体が軽くなった」という声が多く、施術とのセットメニューが人気に。結果、リピート率が50%も向上しました。"
-                        </p>
-                        <p class="text-gray-500 font-bold text-right text-sm">(エステサロン経営・A様)</p>
+                        <p class="text-gray-500 font-bold text-sm text-right">(エステサロン経営・A様)</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
                         <h3 class="text-lg font-bold text-center mb-4 text-gray-700">A様サロンのリピート率変化</h3>
@@ -270,23 +280,35 @@
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg lg:order-2 border border-gray-100">
-                        <div class="mb-6 overflow-hidden rounded-xl shadow-sm">
-                            <img src="https://imgtu.com/uploads/jra5mnqk/r-gc_g.webp" alt="施術風景" class="w-full h-56 object-cover"/>
+                <div class="grid md:grid-cols-2 gap-8 mb-16">
+                    <div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+                        <div class="mb-6 overflow-hidden rounded-xl shadow-sm h-48">
+                            <img src="https://imgtu.com/uploads/jra5mnqk/r-gc_g.webp" alt="施術風景" class="w-full h-full object-cover"/>
                         </div>
-                        <h3 class="text-xl font-bold mb-4 text-gray-800">「広告費ゼロで新規が増えました」</h3>
-                        <p class="text-gray-700 text-base leading-relaxed mb-4">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">「広告費ゼロで新規が増加」</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-grow">
                             "「水の色が変わるのが面白い」と、お客様がご自身のSNSで発信してくれるようになりました。それを見たご友人からの問い合わせが増え、広告費を使わずに新規のお客様が増えています。"
                         </p>
                         <p class="text-gray-500 font-bold text-right text-sm">(リラクゼーションサロン経営・B様)</p>
                     </div>
-                    <div class="lg:order-1 flex items-center justify-center">
-                        <p class="text-3xl lg:text-4xl font-bold text-gray-400 text-center px-8 font-serif leading-relaxed">
-                            お客様の<span class="text-amber-600">驚き</span>が<br>
-                            最高の<span class="text-amber-600">口コミ</span>を生む
-                        </p>
-                    </div>
+
+<div class="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
+    <div class="mb-6 overflow-hidden rounded-xl shadow-sm h-64">
+        <img src="https://iili.io/fd0Ah4n.png" alt="月売上アップ事例" class="w-full h-full object-cover"/>
+    </div>
+    <h3 class="text-xl font-bold mb-3 text-gray-800">「月売上がアップ！」</h3>
+    <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-grow">
+        "他店にないデトックスメニューを導入したことで、色々なセットメニューを販売でき、客単価が大幅に向上。結果として、導入前と比較して月あたりの売上が増加しました。"
+    </p>
+    <p class="text-gray-500 font-bold text-right text-sm">(整体治療院・C様)</p>
+</div>
+                </div>
+
+                <div class="flex items-center justify-center">
+                    <p class="text-2xl md:text-3xl font-bold text-gray-400 text-center px-4 font-serif leading-relaxed">
+                        お客様の<span class="text-amber-600">驚き</span>が、<br>
+                        最高の<span class="text-amber-600">口コミ</span>を生む
+                    </p>
                 </div>
             </div>
         </section>
@@ -314,7 +336,7 @@
                     </div>
                 </div>
                 
-                <div class="max-w-4xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-amber-100">
+                <div class="max-w-4xl mx-auto bg-white p-10 rounded-2xl shadow-xl border border-amber-100 mb-20">
                     <h3 class="text-2xl font-bold text-center mb-8 text-gray-800 font-serif">
                         📺 豊富なメディア放映実績
                     </h3>
@@ -326,6 +348,70 @@
                         <div class="p-2"><p class="font-bold text-gray-400">VoCE掲載</p></div>
                         <div class="p-2"><p class="font-bold text-gray-400">SKY PerfecTV</p></div>
                         <div class="p-2 col-span-2"><p class="text-xs text-gray-400">他多数の番組で紹介されています</p></div>
+                    </div>
+                </div>
+
+                <div id="price" class="scroll-mt-24">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 font-serif">
+                        導入プラン・価格
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-rose-100 transform hover:-translate-y-1 transition duration-300">
+                            <div class="bg-rose-600 text-white py-4 text-center">
+                                <h3 class="text-xl font-bold tracking-wide">サロン仕様タイプ</h3>
+                            </div>
+                            <div class="p-8 text-center">
+                                <p class="text-sm text-gray-500 mb-2 font-bold">【希望小売価格】<br>改良型ヒーター + 電極×2本付</p>
+                                <div class="mb-4">
+                                    <span class="text-4xl md:text-5xl font-bold text-rose-600">584,000</span>
+                                    <span class="text-xl font-bold text-gray-700">円</span>
+                                    <span class="text-sm text-gray-500">(税別)</span>
+                                </div>
+                                <p class="text-gray-500 text-sm mb-6">(税込 642,400円)</p>
+                                
+                                <div class="bg-rose-50 rounded-lg p-5 text-left">
+                                    <p class="text-xs text-rose-500 font-bold text-center mb-3">内訳 (税別)</p>
+                                    <ul class="text-sm text-gray-700 space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-rose-400 mr-2">●</span>本体 512,000円
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-rose-400 mr-2">●</span>電極カートリッジ (付属品+予備)<br>36,000円×2本 = 72,000円
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-rose-400 mr-2">●</span>販促ツール一式 (店内POP・説明ファイル)
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-pink-100 transform hover:-translate-y-1 transition duration-300">
+                            <div class="bg-pink-500 text-white py-4 text-center">
+                                <h3 class="text-xl font-bold tracking-wide">個人仕様タイプ</h3>
+                            </div>
+                            <div class="p-8 text-center">
+                                <p class="text-sm text-gray-500 mb-2 font-bold">【希望小売価格】<br>改良型ヒーター + 電極×1本付</p>
+                                <div class="mb-4">
+                                    <span class="text-4xl md:text-5xl font-bold text-pink-600">548,000</span>
+                                    <span class="text-xl font-bold text-gray-700">円</span>
+                                    <span class="text-sm text-gray-500">(税別)</span>
+                                </div>
+                                <p class="text-gray-500 text-sm mb-6">(税込 602,800円)</p>
+                                
+                                <div class="bg-pink-50 rounded-lg p-5 text-left h-full">
+                                    <p class="text-xs text-pink-500 font-bold text-center mb-3">内訳 (税別)</p>
+                                    <ul class="text-sm text-gray-700 space-y-2">
+                                        <li class="flex items-start">
+                                            <span class="text-pink-400 mr-2">●</span>本体 512,000円
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="text-pink-400 mr-2">●</span>電極カートリッジ (付属品)<br>36,000円
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,24 +443,75 @@
 
     <footer class="py-12 bg-gray-900 text-gray-400 border-t border-gray-800">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="mb-8">
-                <p class="text-xl font-bold text-white mb-2">
-                    📞 お電話でのお問い合わせ
-                </p>
-                <a href="tel:0120-977-801" class="text-3xl font-bold text-amber-500 hover:text-amber-400 transition-colors font-serif">
-                    0120-977-801
-                </a>
-                <p class="text-sm text-gray-500 mt-2">
-                    受付時間: 平日 9:00〜17:00
-                </p>
+            <div class="grid md:grid-cols-2 gap-8 mb-10 max-w-2xl mx-auto">
+                <div>
+                    <p class="text-lg font-bold text-white mb-2">
+                        📞 お電話でのお問い合わせ
+                    </p>
+                    <a href="tel:0120-977-801" class="text-2xl font-bold text-amber-500 hover:text-amber-400 transition-colors font-serif block">
+                        0120-977-801
+                    </a>
+                    <p class="text-xs text-gray-500 mt-1">
+                        受付時間: 平日 9:00〜17:00
+                    </p>
+                </div>
+                <div>
+                    <p class="text-lg font-bold text-white mb-2">
+                        💬 LINEでのお問い合わせ
+                    </p>
+                    <a href="https://line.me/ti/p/HL4WuSjHwA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#06C755] text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-[#05b34c] transition-colors shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-line mr-2" viewBox="0 0 16 16">
+                          <path d="M8 0c-4.418 0-8 3.218-8 7.18 0 2.59 1.526 5.013 4.095 6.391-.15.917-.852 2.353-2.35 2.958 1.38.167 2.937-.525 4.292-1.753.66.168 1.34.254 2.03.254 4.418 0 8-3.218 8-7.18C16 3.218 12.418 0 8 0z"/>
+                        </svg>
+                        LINEで問い合わせる
+                    </a>
+                </div>
             </div>
+            
             <div class="flex justify-center space-x-8 mb-8 text-sm">
-                 <a href="#" class="hover:text-white transition-colors">プライバシーポリシー</a>
+                 <button onclick="document.getElementById('privacyModal').classList.add('active')" class="hover:text-white transition-colors focus:outline-none">プライバシーポリシー</button>
                  <a href="#" class="hover:text-white transition-colors">会社概要</a>
             </div>
-            <p class="text-xs text-gray-600">&copy; 2025 Mind Fitness Co,Ltd. All Rights Reserved.</p>
+            <div class="text-xs text-gray-600">
+                <p class="mb-1">株式会社マインドフィットネス</p>
+                <p>&copy; 2025 Mind Fitness Co,Ltd. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <div id="privacyModal" class="modal fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center sticky top-0 bg-white">
+                <h3 class="text-lg font-bold text-gray-900">プライバシーポリシー</h3>
+                <button onclick="document.getElementById('privacyModal').classList.remove('active')" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+            </div>
+            <div class="p-6 text-sm text-gray-600 leading-relaxed space-y-4">
+                <p>株式会社マインドフィットネス（以下、「当社」といいます。）は、本ウェブサイト上で提供するサービスにおける、ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。</p>
+                
+                <h4 class="font-bold text-gray-800 mt-4">1. 個人情報の収集について</h4>
+                <p>当社は、お問い合わせや資料請求の際に、氏名、住所、電話番号、メールアドレスなどの個人情報をお尋ねすることがあります。</p>
+                
+                <h4 class="font-bold text-gray-800 mt-4">2. 個人情報の利用目的</h4>
+                <p>収集した個人情報は、お問い合わせへの回答、資料の送付、および当社のサービス向上のために利用いたします。</p>
+                
+                <h4 class="font-bold text-gray-800 mt-4">3. 個人情報の第三者提供</h4>
+                <p>当社は、法令に基づく場合を除き、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。</p>
+                
+                <h4 class="font-bold text-gray-800 mt-4">4. 個人情報の管理</h4>
+                <p>当社は、個人情報の漏洩、滅失またはき損の防止その他の個人情報の安全管理のために必要かつ適切な措置を講じます。</p>
+                
+                <h4 class="font-bold text-gray-800 mt-4">5. お問い合わせ窓口</h4>
+                <p>本ポリシーに関するお問い合わせは、下記までお願いいたします。<br>
+                株式会社マインドフィットネス<br>
+                電話番号：0120-977-801</p>
+            </div>
+            <div class="p-4 bg-gray-50 text-center rounded-b-xl">
+                <button onclick="document.getElementById('privacyModal').classList.remove('active')" class="bg-gray-800 text-white px-6 py-2 rounded-lg text-sm font-bold hover:bg-gray-700 transition-colors">
+                    閉じる
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -434,9 +571,16 @@
                     }
                 }
             });
+
+            // モーダル外側クリックで閉じる
+            const modal = document.getElementById('privacyModal');
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
         });
     </script>
 
 </body>
 </html>
-```
